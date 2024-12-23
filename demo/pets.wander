@@ -1,0 +1,12 @@
+?animal-info = { 
+    Doodle subconcept-of Dog, 
+    GreatPyrenees subconcept-of Dog, 
+    Dog subconcept-of Animal, 
+    Munchkin subconcept-of Cat,
+    Cat subconcept-of Animal,
+},
+?pets = { megan : Doodle, anna : GreatPyrenees, clarice : Munchkin },
+
+infer ?animal-info ?pets
+| filter { ?name : Dog }
+| count

@@ -1,6 +1,3 @@
-# ligature-potpourri
-Code/data for various small projects related to Ligature.
+# ligature-scratch-pad
 
-Contents
-
- - lesmis.lig - Donald Knuth's Les Misérables dataset ported to Lig
+Code/data for various small experiments/projects related to Ligature.
