@@ -1,12 +1,15 @@
-?animal-info = { 
-    Doodle subconcept-of Dog, 
-    GreatPyrenees subconcept-of Dog, 
-    Dog subconcept-of Animal, 
-    Munchkin subconcept-of Cat,
-    Cat subconcept-of Animal,
-},
-?pets = { megan : Doodle, anna : GreatPyrenees, clarice : Munchkin },
+{ Doodle subconcept-of Dog, 
+  GreatPyrenees subconcept-of Dog, 
+  Dog subconcept-of Animal, 
+  Munchkin subconcept-of Cat,
+  Cat subconcept-of Animal, }
+*animal-info merge
 
-infer ?animal-info ?pets
-| filter { ?name : Dog }
-| count
+{ megan : Doodle,
+  anna : GreatPyrenees,
+  clarice : Munchkin }
+*pets merge
+
+*pets *animal-info infer 
+{ ?name : Dog } filter 
+count

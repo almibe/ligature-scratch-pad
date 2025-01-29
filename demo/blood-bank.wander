@@ -1,0 +1,33 @@
+{ blood-type.A can-donate-to blood-type.A,
+  blood-type.B can-donate-to blood-type.B,
+  blood-type.AB can-donate-to blood-type.AB,
+  blood-type.O can-donate-to blood-type.O,
+  blood-type.O can-donate-to blood-type.A,
+  blood-type.O can-donate-to blood-type.B,
+  blood-type.O can-donate-to blood-type.AB,
+  blood-type.A can-donate-to blood-type.AB,
+  blood-type.B can-donate-to blood-type.AB,
+
+  patient.alice name "Alice", 
+  patient.alice blood-type blood-type.A,
+  patient.agatha name "Agatha",
+  patient.agatha type blood-type.A,
+  patient.bob name "Bob",
+  patient.bob bloody-type blood-type.B,
+  patient.barbara name "Barbara",
+  patient.barbara blood-type blood-type.B,
+  patient.jess name "Jess",
+  patient.jess blood-type blood-type.AB,
+  patient.karen name "Karen",
+  patient.karen blood-type blood-type.AB,
+  patient.onan name "Onan",
+  patient.onan blood-type blood-type.O,
+  patient.osbert name "Osbert",
+  patient.osbert blood-type blood-type.O, }
+*blood-bank merge
+
+{ potential-donors action-def [
+  
+] } * merge
+
+potential-donors
